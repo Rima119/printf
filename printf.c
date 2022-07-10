@@ -10,8 +10,8 @@
 
 int _printf(const char *format, ...)
 {
-	int n = 0, d = 0;
-	int p, r;
+	unsigned int n = 0, d = 0;
+	unsigned int p, r;
 	va_list a;
 	
 	ptypes_t pr[] = {
