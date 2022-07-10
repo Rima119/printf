@@ -42,7 +42,7 @@ int _printf(const char *format, ...)
 			p = r = 0;
 			while (p < 13)
 			{
-				if (format[n] == pr[p].m)
+				if (format[n] == *(pr[p].m))
 				{
 					d += pr[p].f(a);
 					r = 1;
