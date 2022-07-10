@@ -33,6 +33,7 @@ int print_s(va_list a)
 	}
 	for (n = 0; m[n]; n++)
 	{
-		_putchar(m[n]);								}
+		_putchar(m[n]);
+	}
 	return (n);
 }
