@@ -13,7 +13,7 @@
 
 typedef struct ptypes
 {
-	char m;
+	char *m;
 	int (*f)(va_list a);
 
 } ptypes_t;
