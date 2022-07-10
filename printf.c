@@ -20,7 +20,7 @@ int _printf(const char *format, ...)
 		{"d", print_d},
 		{"i", print_i},
 		{NULL, NULL}
-	}
+	};
 
 	if (format == NULL || (format[0] == '%' && format[1] == 0))
 	{
