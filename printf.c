@@ -11,7 +11,7 @@
 int _printf(const char *format, ...)
 {
 	unsigned int n = 0, d = 0;
-	unsigned int p, r;
+	unsigned int p, int r;
 	va_list a;
 	
 	ptypes_t pr[] = {
