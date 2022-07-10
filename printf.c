@@ -10,7 +10,7 @@
 
 int _printf(const char *format, ...)
 {
-	unsigned int n = 0, d = 0;
+	int n = 0, d = 0;
 	int p, r;
 	va_list a;
 	
