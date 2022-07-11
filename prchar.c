@@ -31,9 +31,21 @@ int print_s(va_list a)
 	{
 		m = "(null)";
 	}
-	for (n = 0; m[n]; n++)
+	for (n = 0; m[n] != '\0'; n++)
 	{
 		_putchar(m[n]);
 	}
 	return (n);
+}
+
+/**
+ * print_p - function that prints the percent symbol
+ * @a: %
+ * Return: 1
+ */
+
+int print_p(__attribute__((unused))va_list a)
+{
+	_putchar('%');
+	return (1);
 }
