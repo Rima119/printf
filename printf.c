@@ -1,9 +1,12 @@
 #include "main.h"
+#include <stdlib.h>
+#include <stdio.h>
+
 
 /**
- *format_specifier - function that checks a format specifier
- *@format: format specifier
- *Return: pointer to function
+ * format_specifier - function that checks a format specifier
+ * @format: format specifier
+ * Return: pointer to function
  */
 
 static int(*format_specifier(const char *format))(va_list)
@@ -24,7 +27,7 @@ static int(*format_specifier(const char *format))(va_list)
 			break;
 		}
 	}
-	return (pr[i].f);
+	return (pr[n].f);
 }
 
 /**
@@ -50,29 +53,33 @@ int _printf(const char *format, ...)
 		for (;format[n] != '%' && format[n]; n++)
 		{
 			_putchar(format[n]);
-			d++
+			d++;
 		}
 		if (!format[n])
 		{
 			return (d);
 		}
-	f = format_specifier(&format[n+1]);
-	if (f != NULL)
-	{
-		d += f(a);
-		i += 2;
-		continue;
-	}
-	if (!format[n+1])
-	{
-		return (-1);
-	}
-	_putchar(format[n]);
-	d++;
-	if (format[n+1] == '%')
-		n += 2;
-	else
-		n++;
+		f = format_specifier(&format[n + 1]);
+		if (f != NULL)
+		{
+			d += f(a);
+			i += 2;
+			continue;
+		}
+		if (!format[n + 1])
+		{
+			return (-1);
+		}
+		_putchar(format[n]);
+		d++;
+		if (format[n + 1] == '%')
+		{
+			n += 2;
+		}
+		else
+		{
+			n++;
+		}
 	}
 	va_end(a);
 	return (d);
