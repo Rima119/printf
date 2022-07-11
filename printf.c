@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdlib.h>
-#include <stdio.h>
 
 /**
  * format_specifier - function that checks a format specifier
@@ -40,7 +39,6 @@ int _printf(const char *format, ...)
 	unsigned int n = 0, d = 0;
 	int (*f)(va_list);
 	va_list a;
-	
 	if (format == NULL || (format[0] == '%' && format[1] == 0))
 	{
 		return (-1);
@@ -48,15 +46,13 @@ int _printf(const char *format, ...)
 	va_start(a, format);
 	while (format != NULL && format[n])
 	{
-		for (;format[n] != '%' && format[n]; n++)
+		for (; format[n] != '%' && format[n]; n++)
 		{
 			_putchar(format[n]);
 			d++;
 		}
 		if (!format[n])
-		{
 			return (d);
-		}
 		f = format_specifier(&format[n + 1]);
 		if (f != NULL)
 		{
@@ -75,9 +71,7 @@ int _printf(const char *format, ...)
 			n += 2;
 		}
 		else
-		{
 			n++;
-		}
 	}
 	va_end(a);
 	return (d);
