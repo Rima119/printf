@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-
 /**
  * format_specifier - function that checks a format specifier
  * @format: format specifier
@@ -14,12 +13,11 @@ static int (*format_specifier(const char *format))(va_list)
 	unsigned int n;
 	ptypes_t pr[] = {
 		{"c", print_c},
-                {"s", print_s},
-                {"d", print_d},
-                {"i", print_i},
-                {NULL, NULL}
-        };
-
+		{"s", print_s},
+		{"d", print_d},
+		{"i", print_i},
+		{NULL, NULL}
+	};
 	for (n = 0; pr[n].m != NULL; n++)
 	{
 		if (*(pr[n].m) == *format)
@@ -42,7 +40,7 @@ int _printf(const char *format, ...)
 	unsigned int n = 0, d = 0;
 	int (*f)(va_list);
 	va_list a;
-
+	
 	if (format == NULL || (format[0] == '%' && format[1] == 0))
 	{
 		return (-1);
