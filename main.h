@@ -15,7 +15,7 @@
 typedef struct ptypes
 {
 	char *m;
-	int (*f)(va_list a);
+	int (*f)(va_list);
 
 } ptypes_t;
 
