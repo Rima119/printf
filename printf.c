@@ -36,9 +36,10 @@ static int (*format_specifier(const char *format))(va_list)
 
 int _printf(const char *format, ...)
 {
-	unsigned int n = 0, d = 0;
-	int (*f)(va_list);
 	va_list a;
+	int (*f)(va_list);
+	unsigned int n = 0, d = 0;
+
 	if (format == NULL || (format[0] == '%' && format[1] == 0))
 	{
 		return (-1);
