@@ -63,7 +63,7 @@ int _printf(const char *format, ...)
 		if (f != NULL)
 		{
 			d += f(a);
-			i += 2;
+			n += 2;
 			continue;
 		}
 		if (!format[n + 1])
