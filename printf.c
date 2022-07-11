@@ -9,7 +9,7 @@
  * Return: pointer to function
  */
 
-static int(*format_specifier(const char *format))(va_list)
+static int (*format_specifier(const char *format))(va_list)
 {
 	unsigned int n;
 	ptypes_t pr[] = {
