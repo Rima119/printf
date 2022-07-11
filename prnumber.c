@@ -12,7 +12,7 @@ int print_d(va_list a)
 	int c = 1, d = 0;
 	unsigned int n;
 	
-	if (b<0)
+	if (b < 0)
 	{
 		d += _putchar('-');
 		n = b * -1;
@@ -41,7 +41,7 @@ int print_i(va_list a)
         int c = 1, d = 0;
         unsigned int n;
 
-        if (b<0)
+        if (b < 0)
         {
                 d += _putchar('-');
                 n = b * -1;
