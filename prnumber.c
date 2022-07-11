@@ -9,8 +9,9 @@
 int print_d(va_list a)
 {
 	int b = va_arg(a, int);
-	int c = 1, d = 0;
 	unsigned int n;
+	int c = 1, d = 0;
+
 	if (b < 0)
 	{
 		d += _putchar('-');
@@ -37,8 +38,9 @@ int print_d(va_list a)
 int print_i(va_list a)
 {
 	int b = va_arg(a, int);
-	int c = 1, d = 0;
 	unsigned int n;
+	int c = 1, d = 0;
+
 	if (b < 0)
 	{
 		d += _putchar('-');
