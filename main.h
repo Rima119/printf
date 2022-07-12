@@ -26,6 +26,5 @@ int print_s(va_list a);
 int print_d(va_list a);
 int print_i(va_list a);
 int _putchar(char c);
-int print_b(va_list a);
 
 #endif /* MAIN.H */
